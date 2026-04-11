@@ -99,6 +99,15 @@ export const homeSocialMenu: HomeMenuItem[] = [
 export const wechatEntries: FeedEntry[] = [
   {
     platform: "wechat",
+    title: "一定会成为很好的大人",
+    summary: "公众号文章入口，点击卡片即可查看原文。",
+    date: "2026-04-07",
+    url: "https://mp.weixin.qq.com/s/obHUkgIljgGe3O7BKYs7jg",
+    coverUrl: "/wechat-cover-placeholder.svg",
+    sourceTag: "WECHAT",
+  },
+  {
+    platform: "wechat",
     title: "西门晴耕：在荒岛上种一颗番茄",
     summary: "公众号文章入口，点击卡片即可查看原文。",
     date: "2026-03-25",
