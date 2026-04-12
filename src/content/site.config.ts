@@ -99,6 +99,15 @@ export const homeSocialMenu: HomeMenuItem[] = [
 export const wechatEntries: FeedEntry[] = [
   {
     platform: "wechat",
+    title: "下雨天随想",
+    summary: "公众号文章入口，点击卡片即可查看原文。",
+    date: "2026-04-12",
+    url: "https://mp.weixin.qq.com/s/ersDlXMwylMywkJEwzGgKA",
+    coverUrl: "/wechat-rain-20260412.jpg",
+    sourceTag: "WECHAT",
+  },
+  {
+    platform: "wechat",
     title: "一定会成为很好的大人",
     summary: "公众号文章入口，点击卡片即可查看原文。",
     date: "2026-04-07",
@@ -108,10 +117,10 @@ export const wechatEntries: FeedEntry[] = [
   },
   {
     platform: "wechat",
-    title: "西门晴耕：在荒岛上种一颗番茄",
+    title: "西门的新开始",
     summary: "公众号文章入口，点击卡片即可查看原文。",
-    date: "2026-03-25",
-    url: "https://mp.weixin.qq.com/s/OQEnKXLdWY4Vsv2-0vOtwQ",
+    date: "2026-03-30",
+    url: "https://mp.weixin.qq.com/s/83R9xYpAWbPl1R2qtkrWHQ",
     coverUrl: "/wechat-cover-placeholder.svg",
     sourceTag: "WECHAT",
   },
@@ -126,10 +135,10 @@ export const wechatEntries: FeedEntry[] = [
   },
   {
     platform: "wechat",
-    title: "西门的新开始",
+    title: "西门晴耕：在荒岛上种一颗番茄",
     summary: "公众号文章入口，点击卡片即可查看原文。",
-    date: "2026-03-30",
-    url: "https://mp.weixin.qq.com/s/83R9xYpAWbPl1R2qtkrWHQ",
+    date: "2026-03-25",
+    url: "https://mp.weixin.qq.com/s/OQEnKXLdWY4Vsv2-0vOtwQ",
     coverUrl: "/wechat-cover-placeholder.svg",
     sourceTag: "WECHAT",
   },

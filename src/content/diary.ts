@@ -12,6 +12,11 @@ export interface DiaryEntry {
 
 export const diaryEntries: DiaryEntry[] = [
   {
+    id: "2026-04-12-codex-antigravity-ai",
+    publishedAt: "2026-04-12T22:20:00+08:00",
+    text: "今日AI大更新！使用Codex将陈年的OpenCode的Bug修复，并且让Codex同志经过艰难的战斗，配合魔法工具的进步，最终将Antigravity成功配置！随后在三个平台上尝试了PPT-Master项目，还得是Claude大人厉害！AI现在可以帮我写论文，做PPT，写代码，虽然以后可能是我的敌人，但现在是我的朋友！",
+  },
+  {
     id: "2026-04-11-screen-ai-question",
     publishedAt: "2026-04-11T22:30:00+08:00",
     text: "昨晚刷着视频屏幕突然出现了绿线，今天下午去官方售后免费维修，体验很棒。晚上和同学聊起AI，现在AI真的很强大！能写代码，能做PPT，能做音乐，能写论文，未来会大规模替代人类吗？这是个Question！",
