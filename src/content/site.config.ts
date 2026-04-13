@@ -147,6 +147,13 @@ export const wechatEntries: FeedEntry[] = [
 export const xhsEntries: FeedEntry[] = [
   {
     platform: "xiaohongshu",
+    title: "亲测有效✨：把 AI 做 PPT 玩成自动化生产",
+    summary: "小红书帖子入口，点击卡片可直接跳转查看。",
+    date: "2026-04-12",
+    url: "https://www.xiaohongshu.com/discovery/item/69dbab3e000000001a0229cb?source=webshare&xhsshare=pc_web&xsec_token=GBamR3_PMaD2q4uBRHo7j6DNGODOyjCxM7SvZ15f7BF-E=&xsec_source=pc_share",
+  },
+  {
+    platform: "xiaohongshu",
     title: "把不开心留在今天",
     summary: "就去洗个澡，就收拾房间，就起身出门，让情绪转移而不是硬抗。",
     date: "2026-04-01",
