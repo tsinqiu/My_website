@@ -1,0 +1,333 @@
+﻿:root {
+  --font-display: "Silkscreen", "Press Start 2P", "ZCOOL QingKe HuangYou", "Microsoft YaHei", sans-serif;
+  --font-body: "Nunito", "Noto Sans SC", "LXGW WenKai", "Microsoft YaHei", sans-serif;
+  --card-blur: 24px;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  --bg-main: #f4f6f9;
+  --text-main: #2b3238;
+  --text-strong: #171d22;
+  --text-muted: #5a6b74;
+  --text-subtle: #798c95;
+  --surface-main: rgba(255, 255, 255, 0.45);
+  --surface-strong: rgba(255, 255, 255, 0.65);
+  --surface-soft: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.55);
+  --glass-border-soft: rgba(255, 255, 255, 0.25);
+  --glass-shadow: 0 16px 40px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  --glass-shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.01), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  --focus-ring: #a8b9ce;
+  --button-text: #ffffff;
+  --particle-soft: rgba(210, 230, 255, 0.6);
+  --particle-muted: rgba(255, 210, 230, 0.5);
+  --particle-glow: rgba(255, 240, 200, 0.5);
+  --particle-opacity-1: 0.8;
+  --particle-opacity-2: 0.6;
+  --pcb-line: rgba(120, 146, 129, 0.2);
+  --pcb-line-soft: rgba(120, 146, 129, 0.1);
+  --pcb-node: rgba(108, 135, 118, 0.3);
+  --bg-tech-accent: rgba(200, 220, 240, 0.3);
+  --title-metallic: #171d22;
+  --button-wechat-gradient: #43b573;
+  --button-xhs-gradient: #ff4a5a;
+  --button-bili-gradient: #00aeec;
+  --button-yuque-gradient: #25b864;
+  min-height: 100svh;
+  color: var(--text-main);
+  background-color: var(--bg-main);
+  background-image:
+    repeating-linear-gradient(90deg, transparent 0 116px, var(--pcb-line) 116px 117.4px, transparent 117.4px 244px),
+    repeating-linear-gradient(0deg, transparent 0 98px, var(--pcb-line) 98px 99.4px, transparent 99.4px 206px),
+    radial-gradient(circle at 116px 98px, var(--pcb-node) 0 2.2px, transparent 2.8px),
+    repeating-linear-gradient(90deg, transparent 0 76px, var(--pcb-line-soft) 76px 77px, transparent 77px 178px),
+    repeating-linear-gradient(0deg, transparent 0 152px, var(--pcb-line-soft) 152px 153px, transparent 153px 314px),
+    radial-gradient(circle at 76px 152px, color-mix(in srgb, var(--pcb-node) 68%, transparent) 0 1.8px, transparent 2.4px),
+    radial-gradient(120% 110% at 8% 12%, rgba(214, 234, 255, 0.8) 0%, rgba(214, 234, 255, 0) 58%),
+    radial-gradient(98% 90% at 92% 18%, rgba(255, 219, 233, 0.7) 0%, rgba(255, 219, 233, 0) 52%),
+    radial-gradient(88% 92% at 48% 100%, rgba(255, 241, 204, 0.6) 0%, rgba(255, 241, 204, 0) 60%),
+    linear-gradient(160deg, #f4f6f9 0%, #e9eef5 100%);
+  background-size:
+    auto,
+    auto,
+    244px 206px,
+    auto,
+    auto,
+    178px 314px,
+    auto,
+    auto,
+    auto,
+    auto;
+  background-repeat:
+    repeat,
+    repeat,
+    repeat,
+    repeat,
+    repeat,
+    repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    32px 44px,
+    32px 44px,
+    32px 44px,
+    8% 12%,
+    92% 18%,
+    48% 100%,
+    0 0;
+  background-attachment: fixed;
+  font-family: var(--font-body);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition:
+    background 320ms ease,
+    color 320ms ease;
+  position: relative;
+  isolation: isolate;
+}
+
+body.weather-rain {
+  --bg-main: #14151a;
+  --text-main: #dbe3ed;
+  --text-strong: #f0f4f8;
+  --text-muted: #9baac4;
+  --text-subtle: #73849e;
+  --surface-main: rgba(30, 32, 42, 0.45);
+  --surface-strong: rgba(40, 43, 55, 0.6);
+  --surface-soft: rgba(20, 21, 28, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-soft: rgba(255, 255, 255, 0.06);
+  --glass-shadow: 0 24px 52px rgba(0, 0, 0, 0.4), 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --glass-shadow-soft: 0 12px 24px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --focus-ring: #4b628a;
+  --button-text: #ffffff;
+  --particle-soft: rgba(180, 255, 120, 0.5); /* 萤火虫绿黄色 */
+  --particle-muted: rgba(200, 255, 150, 0.6); /* 萤火虫亮黄 */
+  --particle-glow: rgba(150, 255, 100, 0.4); /* 萤火虫暗绿 */
+  --particle-opacity-1: 0.9;
+  --particle-opacity-2: 0.8;
+  --pcb-line: rgba(111, 149, 132, 0.1);
+  --pcb-line-soft: rgba(111, 149, 132, 0.05);
+  --pcb-node: rgba(121, 164, 145, 0.15);
+  --bg-tech-accent: rgba(45, 65, 105, 0.3);
+  --title-metallic: #f0f4f8;
+  --button-wechat-gradient: #379e61;
+  --button-xhs-gradient: #c43f3f;
+  --button-bili-gradient: #0087b3;
+  --button-yuque-gradient: #1e9952;
+  color-scheme: dark;
+  background-color: var(--bg-main);
+  background-image:
+    repeating-linear-gradient(90deg, transparent 0 116px, var(--pcb-line) 116px 117.4px, transparent 117.4px 244px),
+    repeating-linear-gradient(0deg, transparent 0 98px, var(--pcb-line) 98px 99.4px, transparent 99.4px 206px),
+    radial-gradient(circle at 116px 98px, var(--pcb-node) 0 2.2px, transparent 2.8px),
+    repeating-linear-gradient(90deg, transparent 0 76px, var(--pcb-line-soft) 76px 77px, transparent 77px 178px),
+    repeating-linear-gradient(0deg, transparent 0 152px, var(--pcb-line-soft) 152px 153px, transparent 153px 314px),
+    radial-gradient(circle at 76px 152px, color-mix(in srgb, var(--pcb-node) 68%, transparent) 0 1.8px, transparent 2.4px),
+    radial-gradient(128% 112% at 8% 10%, rgba(35, 45, 75, 0.6) 0%, rgba(35, 45, 75, 0) 56%),
+    radial-gradient(94% 84% at 90% 14%, rgba(60, 35, 65, 0.5) 0%, rgba(60, 35, 65, 0) 52%),
+    radial-gradient(90% 90% at 50% 98%, rgba(20, 50, 60, 0.4) 0%, rgba(20, 50, 60, 0) 60%),
+    linear-gradient(165deg, #14151a 0%, #0d0f14 100%);
+}
+
+body > :not(.ambientParticles):not(.floatingUiLayer) {
+  position: relative;
+  z-index: 1;
+}
+
+.ambientParticles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.ambientParticles::before,
+.ambientParticles::after {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  pointer-events: none;
+}
+
+.ambientParticles::before {
+  background-image:
+    radial-gradient(circle, var(--particle-soft) 0, transparent 40%),
+    radial-gradient(circle, var(--particle-muted) 0, transparent 45%),
+    radial-gradient(circle, var(--particle-soft) 0, transparent 35%);
+  background-size:
+    400px 400px,
+    500px 500px,
+    600px 600px;
+  background-position:
+    0 0,
+    150px 80px,
+    50px 200px;
+  opacity: var(--particle-opacity-1);
+  filter: blur(40px);
+  animation: particleDriftA 40s linear infinite;
+}
+
+.ambientParticles::after {
+  background-image:
+    radial-gradient(circle, var(--particle-glow) 0, transparent 40%),
+    radial-gradient(circle, var(--particle-glow) 0, transparent 35%),
+    radial-gradient(circle, var(--particle-muted) 0, transparent 40%);
+  background-size:
+    450px 450px,
+    550px 550px,
+    650px 650px;
+  background-position:
+    100px 50px,
+    300px 200px,
+    150px 300px;
+  opacity: var(--particle-opacity-2);
+  filter: blur(50px);
+  animation:
+    particleDriftB 50s ease-in-out infinite alternate,
+    particleTwinkle 15s ease-in-out infinite;
+}
+
+body.weather-rain .ambientParticles::before {
+  background-image:
+    radial-gradient(circle, var(--particle-soft) 0 2px, transparent 4px),
+    radial-gradient(circle, var(--particle-muted) 0 1.5px, transparent 3px),
+    radial-gradient(circle, var(--particle-soft) 0 2.5px, transparent 5px);
+  background-size:
+    300px 300px,
+    400px 400px,
+    500px 500px;
+  background-position:
+    0 0,
+    150px 80px,
+    50px 200px;
+  opacity: var(--particle-opacity-1);
+  filter: blur(1px); /* 减少模糊，让萤火虫更清晰 */
+  animation: fireflyDriftA 30s ease-in-out infinite alternate, fireflyTwinkle 4s ease-in-out infinite alternate;
+}
+
+body.weather-rain .ambientParticles::after {
+  background-image:
+    radial-gradient(circle, var(--particle-glow) 0 3px, transparent 6px),
+    radial-gradient(circle, var(--particle-glow) 0 2px, transparent 4px),
+    radial-gradient(circle, var(--particle-muted) 0 2.5px, transparent 5px);
+  background-size:
+    350px 350px,
+    450px 450px,
+    550px 550px;
+  background-position:
+    100px 50px,
+    300px 200px,
+    150px 300px;
+  opacity: var(--particle-opacity-2);
+  filter: blur(1.5px);
+  animation: fireflyDriftB 40s ease-in-out infinite alternate, fireflyTwinkle 6s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes fireflyDriftA {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(20px, -30px, 0) scale(1.1); }
+  66% { transform: translate3d(-15px, -10px, 0) scale(0.9); }
+  100% { transform: translate3d(10px, 20px, 0) scale(1); }
+}
+
+@keyframes fireflyDriftB {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(-25px, 20px, 0) scale(0.9); }
+  66% { transform: translate3d(15px, 35px, 0) scale(1.1); }
+  100% { transform: translate3d(-10px, -15px, 0) scale(1); }
+}
+
+@keyframes fireflyTwinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; filter: blur(2px) brightness(1.5); }
+}
+
+@keyframes particleDriftA {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(18px, -26px, 0);
+  }
+}
+
+@keyframes particleDriftB {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-22px, 28px, 0);
+  }
+}
+
+@keyframes particleTwinkle {
+  0%,
+  100% {
+    opacity: calc(var(--particle-opacity-2) * 0.88);
+  }
+  50% {
+    opacity: calc(var(--particle-opacity-2) * 1.24);
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+.siteCopyright {
+  width: min(1240px, calc(100% - 1.8rem));
+  margin: 0 auto 1.1rem;
+  padding-top: 0.85rem;
+  text-align: center;
+  color: var(--text-subtle);
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+}
+
+.siteCopyright::before {
+  content: "";
+  display: block;
+  width: min(300px, 60%);
+  height: 1px;
+  margin: 0 auto 0.58rem;
+  border-radius: 999px;
+  background: var(--glass-border-soft);
+  opacity: 0.8;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ambientParticles::before,
+  .ambientParticles::after {
+    animation: none;
+    opacity: calc(var(--particle-opacity-1) * 0.48);
+    transform: none;
+  }
+}
+
+
