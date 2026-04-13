@@ -1,7 +1,7 @@
 ﻿:root {
   --font-display: "Silkscreen", "Press Start 2P", "ZCOOL QingKe HuangYou", "Microsoft YaHei", sans-serif;
   --font-body: "Nunito", "Noto Sans SC", "LXGW WenKai", "Microsoft YaHei", sans-serif;
-  --card-blur: 10px;
+  --card-blur: 24px;
 }
 
 html,
@@ -17,34 +17,34 @@ body {
 }
 
 body {
-  --bg-main: #dce8dd;
-  --text-main: #2f3a3f;
-  --text-strong: #243135;
-  --text-muted: #4c5a61;
-  --text-subtle: #68757c;
-  --surface-main: rgba(255, 252, 246, 0.58);
-  --surface-strong: rgba(255, 254, 250, 0.72);
-  --surface-soft: rgba(255, 251, 244, 0.5);
-  --glass-border: rgba(148, 145, 136, 0.34);
-  --glass-border-soft: rgba(162, 158, 149, 0.22);
-  --glass-shadow: 0 20px 44px rgba(89, 93, 104, 0.16), 0 8px 18px rgba(92, 96, 105, 0.08);
-  --glass-shadow-soft: 0 10px 24px rgba(98, 102, 116, 0.12), 0 3px 10px rgba(95, 98, 108, 0.08);
-  --focus-ring: #6f9585;
-  --button-text: #f5f8f6;
-  --particle-soft: rgba(245, 255, 240, 0.42);
-  --particle-muted: rgba(196, 214, 195, 0.35);
-  --particle-glow: rgba(248, 255, 233, 0.3);
-  --particle-opacity-1: 0.38;
-  --particle-opacity-2: 0.26;
-  --pcb-line: rgba(120, 146, 129, 0.33);
-  --pcb-line-soft: rgba(120, 146, 129, 0.2);
-  --pcb-node: rgba(108, 135, 118, 0.46);
-  --bg-tech-accent: rgba(167, 191, 174, 0.16);
-  --title-metallic: linear-gradient(120deg, #a8854f 10%, #ead8b6 40%, #c09b61 66%, #f6ead4 90%);
-  --button-wechat-gradient: linear-gradient(135deg, #64816f 10%, #7f9a89 56%, #96ac9e 100%);
-  --button-xhs-gradient: linear-gradient(135deg, #8f6c78 10%, #aa848e 56%, #c09da4 100%);
-  --button-bili-gradient: linear-gradient(135deg, #667d90 10%, #8299ab 56%, #9badbd 100%);
-  --button-yuque-gradient: linear-gradient(135deg, #6f7f92 10%, #8a99ad 56%, #a4b1c2 100%);
+  --bg-main: #f4f6f9;
+  --text-main: #2b3238;
+  --text-strong: #171d22;
+  --text-muted: #5a6b74;
+  --text-subtle: #798c95;
+  --surface-main: rgba(255, 255, 255, 0.45);
+  --surface-strong: rgba(255, 255, 255, 0.65);
+  --surface-soft: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.55);
+  --glass-border-soft: rgba(255, 255, 255, 0.25);
+  --glass-shadow: 0 16px 40px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.02), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  --glass-shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.03), 0 2px 8px rgba(0, 0, 0, 0.01), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  --focus-ring: #a8b9ce;
+  --button-text: #ffffff;
+  --particle-soft: rgba(210, 230, 255, 0.6);
+  --particle-muted: rgba(255, 210, 230, 0.5);
+  --particle-glow: rgba(255, 240, 200, 0.5);
+  --particle-opacity-1: 0.8;
+  --particle-opacity-2: 0.6;
+  --pcb-line: rgba(120, 146, 129, 0.2);
+  --pcb-line-soft: rgba(120, 146, 129, 0.1);
+  --pcb-node: rgba(108, 135, 118, 0.3);
+  --bg-tech-accent: rgba(200, 220, 240, 0.3);
+  --title-metallic: #171d22;
+  --button-wechat-gradient: #43b573;
+  --button-xhs-gradient: #ff4a5a;
+  --button-bili-gradient: #00aeec;
+  --button-yuque-gradient: #25b864;
   min-height: 100svh;
   color: var(--text-main);
   background-color: var(--bg-main);
@@ -55,10 +55,10 @@ body {
     repeating-linear-gradient(90deg, transparent 0 76px, var(--pcb-line-soft) 76px 77px, transparent 77px 178px),
     repeating-linear-gradient(0deg, transparent 0 152px, var(--pcb-line-soft) 152px 153px, transparent 153px 314px),
     radial-gradient(circle at 76px 152px, color-mix(in srgb, var(--pcb-node) 68%, transparent) 0 1.8px, transparent 2.4px),
-    radial-gradient(120% 110% at 8% 12%, rgba(168, 191, 174, 0.2) 0%, rgba(168, 191, 174, 0) 58%),
-    radial-gradient(98% 90% at 92% 18%, rgba(143, 168, 149, 0.16) 0%, rgba(143, 168, 149, 0) 52%),
-    radial-gradient(88% 92% at 48% 100%, rgba(171, 190, 174, 0.13) 0%, rgba(171, 190, 174, 0) 60%),
-    linear-gradient(160deg, #dde8de 0%, #d6e2d7 52%, #cfddd0 100%);
+    radial-gradient(120% 110% at 8% 12%, rgba(214, 234, 255, 0.8) 0%, rgba(214, 234, 255, 0) 58%),
+    radial-gradient(98% 90% at 92% 18%, rgba(255, 219, 233, 0.7) 0%, rgba(255, 219, 233, 0) 52%),
+    radial-gradient(88% 92% at 48% 100%, rgba(255, 241, 204, 0.6) 0%, rgba(255, 241, 204, 0) 60%),
+    linear-gradient(160deg, #f4f6f9 0%, #e9eef5 100%);
   background-size:
     auto,
     auto,
@@ -105,41 +105,47 @@ body {
 }
 
 body.weather-rain {
-  --bg-main: #0f1d1a;
-  --text-main: #dbe8e0;
-  --text-strong: #eaf5ef;
-  --text-muted: #b6c8bf;
-  --text-subtle: #95ada2;
-  --surface-main: rgba(22, 37, 32, 0.56);
-  --surface-strong: rgba(25, 42, 36, 0.68);
-  --surface-soft: rgba(19, 31, 28, 0.48);
-  --glass-border: rgba(184, 206, 196, 0.24);
-  --glass-border-soft: rgba(169, 197, 185, 0.16);
-  --glass-shadow: 0 24px 52px rgba(4, 10, 9, 0.55), 0 10px 20px rgba(2, 8, 7, 0.35);
-  --glass-shadow-soft: 0 12px 24px rgba(2, 8, 7, 0.36), 0 4px 12px rgba(1, 6, 5, 0.28);
-  --focus-ring: #8bbfa7;
-  --button-text: #eaf3ef;
-  --particle-soft: rgba(196, 229, 214, 0.26);
-  --particle-muted: rgba(122, 166, 146, 0.22);
-  --particle-glow: rgba(174, 218, 192, 0.22);
-  --particle-opacity-1: 0.26;
-  --particle-opacity-2: 0.18;
-  --pcb-line: rgba(111, 149, 132, 0.24);
-  --pcb-line-soft: rgba(111, 149, 132, 0.14);
-  --pcb-node: rgba(121, 164, 145, 0.3);
-  --bg-tech-accent: rgba(88, 125, 111, 0.14);
-  --title-metallic: linear-gradient(118deg, #7a8f81 6%, #e6d8ba 42%, #8fb19a 68%, #f6ebcd 96%);
-  --button-wechat-gradient: linear-gradient(135deg, #4f6e5e 10%, #668373 56%, #7a9788 100%);
-  --button-xhs-gradient: linear-gradient(135deg, #775b64 10%, #916f78 56%, #ac858e 100%);
-  --button-bili-gradient: linear-gradient(135deg, #536a7f 10%, #6a8498 56%, #8099ac 100%);
-  --button-yuque-gradient: linear-gradient(135deg, #586777 10%, #6f8092 56%, #8797a8 100%);
+  --bg-main: #14151a;
+  --text-main: #dbe3ed;
+  --text-strong: #f0f4f8;
+  --text-muted: #9baac4;
+  --text-subtle: #73849e;
+  --surface-main: rgba(30, 32, 42, 0.45);
+  --surface-strong: rgba(40, 43, 55, 0.6);
+  --surface-soft: rgba(20, 21, 28, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-soft: rgba(255, 255, 255, 0.06);
+  --glass-shadow: 0 24px 52px rgba(0, 0, 0, 0.4), 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --glass-shadow-soft: 0 12px 24px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  --focus-ring: #4b628a;
+  --button-text: #ffffff;
+  --particle-soft: rgba(180, 255, 120, 0.5); /* 萤火虫绿黄色 */
+  --particle-muted: rgba(200, 255, 150, 0.6); /* 萤火虫亮黄 */
+  --particle-glow: rgba(150, 255, 100, 0.4); /* 萤火虫暗绿 */
+  --particle-opacity-1: 0.9;
+  --particle-opacity-2: 0.8;
+  --pcb-line: rgba(111, 149, 132, 0.1);
+  --pcb-line-soft: rgba(111, 149, 132, 0.05);
+  --pcb-node: rgba(121, 164, 145, 0.15);
+  --bg-tech-accent: rgba(45, 65, 105, 0.3);
+  --title-metallic: #f0f4f8;
+  --button-wechat-gradient: #379e61;
+  --button-xhs-gradient: #c43f3f;
+  --button-bili-gradient: #0087b3;
+  --button-yuque-gradient: #1e9952;
   color-scheme: dark;
   background-color: var(--bg-main);
   background-image:
-    radial-gradient(128% 112% at 8% 10%, rgba(48, 89, 75, 0.34) 0%, rgba(48, 89, 75, 0) 56%),
-    radial-gradient(94% 84% at 90% 14%, rgba(33, 59, 80, 0.34) 0%, rgba(33, 59, 80, 0) 52%),
-    radial-gradient(90% 90% at 50% 98%, rgba(68, 52, 86, 0.26) 0%, rgba(68, 52, 86, 0) 60%),
-    linear-gradient(165deg, #0f1d1a 0%, #122825 48%, #141f2f 100%);
+    repeating-linear-gradient(90deg, transparent 0 116px, var(--pcb-line) 116px 117.4px, transparent 117.4px 244px),
+    repeating-linear-gradient(0deg, transparent 0 98px, var(--pcb-line) 98px 99.4px, transparent 99.4px 206px),
+    radial-gradient(circle at 116px 98px, var(--pcb-node) 0 2.2px, transparent 2.8px),
+    repeating-linear-gradient(90deg, transparent 0 76px, var(--pcb-line-soft) 76px 77px, transparent 77px 178px),
+    repeating-linear-gradient(0deg, transparent 0 152px, var(--pcb-line-soft) 152px 153px, transparent 153px 314px),
+    radial-gradient(circle at 76px 152px, color-mix(in srgb, var(--pcb-node) 68%, transparent) 0 1.8px, transparent 2.4px),
+    radial-gradient(128% 112% at 8% 10%, rgba(35, 45, 75, 0.6) 0%, rgba(35, 45, 75, 0) 56%),
+    radial-gradient(94% 84% at 90% 14%, rgba(60, 35, 65, 0.5) 0%, rgba(60, 35, 65, 0) 52%),
+    radial-gradient(90% 90% at 50% 98%, rgba(20, 50, 60, 0.4) 0%, rgba(20, 50, 60, 0) 60%),
+    linear-gradient(165deg, #14151a 0%, #0d0f14 100%);
 }
 
 body > :not(.ambientParticles):not(.floatingUiLayer) {
@@ -165,39 +171,95 @@ body > :not(.ambientParticles):not(.floatingUiLayer) {
 
 .ambientParticles::before {
   background-image:
-    radial-gradient(circle, var(--particle-soft) 0 1.1px, transparent 1.8px),
-    radial-gradient(circle, var(--particle-muted) 0 1.3px, transparent 1.9px),
-    radial-gradient(circle, var(--particle-soft) 0 0.95px, transparent 1.7px);
+    radial-gradient(circle, var(--particle-soft) 0, transparent 40%),
+    radial-gradient(circle, var(--particle-muted) 0, transparent 45%),
+    radial-gradient(circle, var(--particle-soft) 0, transparent 35%);
   background-size:
-    218px 218px,
-    292px 292px,
-    336px 336px;
+    400px 400px,
+    500px 500px,
+    600px 600px;
   background-position:
     0 0,
-    88px 44px,
-    28px 132px;
+    150px 80px,
+    50px 200px;
   opacity: var(--particle-opacity-1);
-  animation: particleDriftA 56s linear infinite;
+  filter: blur(40px);
+  animation: particleDriftA 40s linear infinite;
 }
 
 .ambientParticles::after {
   background-image:
-    radial-gradient(circle, var(--particle-glow) 0 2.5px, transparent 4px),
-    radial-gradient(circle, var(--particle-glow) 0 2px, transparent 3.3px),
-    radial-gradient(circle, var(--particle-muted) 0 1.8px, transparent 3px);
+    radial-gradient(circle, var(--particle-glow) 0, transparent 40%),
+    radial-gradient(circle, var(--particle-glow) 0, transparent 35%),
+    radial-gradient(circle, var(--particle-muted) 0, transparent 40%);
+  background-size:
+    450px 450px,
+    550px 550px,
+    650px 650px;
+  background-position:
+    100px 50px,
+    300px 200px,
+    150px 300px;
+  opacity: var(--particle-opacity-2);
+  filter: blur(50px);
+  animation:
+    particleDriftB 50s ease-in-out infinite alternate,
+    particleTwinkle 15s ease-in-out infinite;
+}
+
+body.weather-rain .ambientParticles::before {
+  background-image:
+    radial-gradient(circle, var(--particle-soft) 0 2px, transparent 4px),
+    radial-gradient(circle, var(--particle-muted) 0 1.5px, transparent 3px),
+    radial-gradient(circle, var(--particle-soft) 0 2.5px, transparent 5px);
+  background-size:
+    300px 300px,
+    400px 400px,
+    500px 500px;
+  background-position:
+    0 0,
+    150px 80px,
+    50px 200px;
+  opacity: var(--particle-opacity-1);
+  filter: blur(1px); /* 减少模糊，让萤火虫更清晰 */
+  animation: fireflyDriftA 30s ease-in-out infinite alternate, fireflyTwinkle 4s ease-in-out infinite alternate;
+}
+
+body.weather-rain .ambientParticles::after {
+  background-image:
+    radial-gradient(circle, var(--particle-glow) 0 3px, transparent 6px),
+    radial-gradient(circle, var(--particle-glow) 0 2px, transparent 4px),
+    radial-gradient(circle, var(--particle-muted) 0 2.5px, transparent 5px);
   background-size:
     350px 350px,
-    430px 430px,
-    510px 510px;
+    450px 450px,
+    550px 550px;
   background-position:
-    42px 24px,
-    176px 142px,
-    90px 232px;
+    100px 50px,
+    300px 200px,
+    150px 300px;
   opacity: var(--particle-opacity-2);
-  filter: blur(0.22px);
-  animation:
-    particleDriftB 74s ease-in-out infinite alternate,
-    particleTwinkle 11s ease-in-out infinite;
+  filter: blur(1.5px);
+  animation: fireflyDriftB 40s ease-in-out infinite alternate, fireflyTwinkle 6s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes fireflyDriftA {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(20px, -30px, 0) scale(1.1); }
+  66% { transform: translate3d(-15px, -10px, 0) scale(0.9); }
+  100% { transform: translate3d(10px, 20px, 0) scale(1); }
+}
+
+@keyframes fireflyDriftB {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(-25px, 20px, 0) scale(0.9); }
+  66% { transform: translate3d(15px, 35px, 0) scale(1.1); }
+  100% { transform: translate3d(-10px, -15px, 0) scale(1); }
+}
+
+@keyframes fireflyTwinkle {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 1; filter: blur(2px) brightness(1.5); }
 }
 
 @keyframes particleDriftA {
@@ -252,15 +314,12 @@ svg {
 .siteCopyright::before {
   content: "";
   display: block;
-  width: min(700px, 96%);
-  height: 8px;
+  width: min(300px, 60%);
+  height: 1px;
   margin: 0 auto 0.58rem;
   border-radius: 999px;
-  background:
-    radial-gradient(circle at 10% 50%, color-mix(in srgb, var(--pcb-node) 50%, transparent) 0 2px, transparent 2.2px),
-    radial-gradient(circle at 90% 50%, color-mix(in srgb, var(--pcb-node) 50%, transparent) 0 2px, transparent 2.2px),
-    repeating-linear-gradient(90deg, color-mix(in srgb, var(--pcb-line) 50%, transparent) 0 8px, transparent 8px 16px);
-  opacity: 0.78;
+  background: var(--glass-border-soft);
+  opacity: 0.8;
 }
 @media (prefers-reduced-motion: reduce) {
   .ambientParticles::before,

@@ -1,7 +1,8 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 
 import { BackgroundMusicPlayer } from "@/components/background-music-player";
 import { WeatherModeToggle } from "@/components/weather-mode-toggle";
+import { MouseGlow } from "@/components/mouse-glow";
 
 import "./globals.css";
 
@@ -19,6 +20,7 @@ export default function RootLayout({
     <html lang="zh-CN">
       <body>
         <div className="ambientParticles" aria-hidden />
+        <MouseGlow />
         <WeatherModeToggle />
         <BackgroundMusicPlayer />
         {children}

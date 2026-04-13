@@ -1,4 +1,4 @@
-﻿.sidebar {
+.sidebar {
   position: sticky;
   top: 5.8rem;
   display: grid;
@@ -8,18 +8,26 @@
 
 .card {
   border: 1px solid var(--glass-border);
-  border-radius: 18px;
+  border-radius: 20px;
   background: var(--surface-main);
   box-shadow: var(--glass-shadow-soft);
   backdrop-filter: blur(var(--card-blur));
   -webkit-backdrop-filter: blur(var(--card-blur));
-  padding: 1.04rem 1.08rem;
+  padding: 1.2rem 1.2rem;
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glass-shadow);
+  background: var(--surface-strong);
 }
 
 .card h3 {
   font-family: var(--font-display);
-  font-size: 0.92rem;
+  font-size: 0.95rem;
   color: var(--text-strong);
+  margin-bottom: 0.4rem;
 }
 
 .value {
@@ -32,7 +40,7 @@
 .sub {
   margin-top: 0.44rem;
   color: var(--text-subtle);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
 }
 
 .weather {
@@ -44,7 +52,7 @@
 .tip {
   margin-top: 0.4rem;
   color: var(--text-subtle);
-  font-size: 0.84rem;
+  font-size: 0.85rem;
 }
 
 .quote {

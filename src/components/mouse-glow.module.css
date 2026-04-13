@@ -1,0 +1,22 @@
+.mouseGlow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 400px;
+  height: 400px;
+  margin-left: -200px; /* 居中对齐鼠标 */
+  margin-top: -200px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999; /* 确保在大多数元素上方，但不会阻挡点击 */
+  mix-blend-mode: soft-light;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(20px);
+  transition: opacity 300ms ease;
+  will-change: transform;
+}
+
+:global(body.weather-rain) .mouseGlow {
+  background: radial-gradient(circle, rgba(200, 230, 255, 0.12) 0%, rgba(200, 230, 255, 0) 70%);
+  mix-blend-mode: screen;
+}

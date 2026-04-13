@@ -1,4 +1,4 @@
-﻿.page {
+.page {
   position: relative;
   min-height: 100svh;
   overflow: clip;
@@ -31,29 +31,13 @@
     radial-gradient(circle at 12% 14%, color-mix(in srgb, var(--bg-tech-accent) 88%, transparent) 0, transparent 44%),
     radial-gradient(circle at 88% 18%, color-mix(in srgb, var(--bg-tech-accent) 74%, transparent) 0, transparent 40%),
     radial-gradient(circle at 58% 96%, color-mix(in srgb, var(--bg-tech-accent) 66%, transparent) 0, transparent 50%);
-  opacity: 0.18;
+  opacity: 0.4;
+  filter: blur(60px);
   z-index: -3;
 }
 
 .pixelDust {
-  background-image:
-    radial-gradient(circle at center, color-mix(in srgb, var(--pcb-node) 64%, transparent) 0 2.4px, transparent 2.6px),
-    radial-gradient(circle at center, color-mix(in srgb, var(--pcb-node) 60%, transparent) 0 2px, transparent 2.3px),
-    linear-gradient(90deg, color-mix(in srgb, var(--pcb-line-soft) 86%, transparent) 0 0),
-    linear-gradient(0deg, color-mix(in srgb, var(--pcb-line-soft) 86%, transparent) 0 0);
-  background-size:
-    180px 180px,
-    220px 220px,
-    96px 1px,
-    1px 104px;
-  background-repeat: no-repeat;
-  background-position:
-    8% 17%,
-    86% 76%,
-    90% 18%,
-    12% 82%;
-  opacity: 0.11;
-  z-index: -2;
+  display: none;
 }
 
 .main {
@@ -65,11 +49,19 @@
 .hero,
 .menuSection {
   border: 1px solid var(--glass-border);
-  border-radius: 26px;
-  box-shadow: var(--glass-shadow);
+  border-radius: 28px;
+  box-shadow: var(--glass-shadow-soft);
   background: var(--surface-main);
   backdrop-filter: blur(var(--card-blur));
   -webkit-backdrop-filter: blur(var(--card-blur));
+  transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 400ms ease, background 400ms ease;
+}
+
+.hero:hover,
+.menuSection:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--glass-shadow);
+  background: var(--surface-strong);
 }
 
 .hero {
@@ -80,19 +72,65 @@
 }
 
 .avatarWrap {
+  position: relative;
   border: 1px solid var(--glass-border-soft);
-  border-radius: 18px;
+  border-radius: 50%;
   background: var(--surface-strong);
-  box-shadow: var(--glass-shadow-soft);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.05), var(--glass-shadow-soft);
   display: grid;
   place-items: center;
-  overflow: hidden;
+  overflow: visible; /* 允许光环溢出 */
+  transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 400ms ease;
+  z-index: 2;
+}
+
+.avatarWrap::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent, var(--focus-ring), transparent 60%);
+  animation: spin 4s linear infinite;
+  opacity: 0;
+  transition: opacity 400ms ease;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.avatarWrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--surface-strong);
+  z-index: -1;
+}
+
+.avatarWrap:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12), var(--glass-shadow);
+}
+
+.avatarWrap:hover::before {
+  opacity: 1;
 }
 
 .avatarWrap :global(img) {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .heroCopy h1 {
@@ -100,10 +138,8 @@
   font-size: clamp(1.65rem, 4vw, 2.5rem);
   line-height: 1.1;
   margin-top: 0.45rem;
-  background: var(--title-metallic);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--text-strong);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .introLine {
@@ -121,16 +157,18 @@
 }
 
 .bio {
-  margin-top: 0.75rem;
+  margin-top: 0.85rem;
   color: var(--text-main);
-  line-height: 1.7;
+  line-height: 1.8;
   max-width: 62ch;
+  font-size: 1.05rem;
 }
 
 .location {
-  margin-top: 0.5rem;
+  margin-top: 0.65rem;
   color: var(--text-muted);
   font-weight: 700;
+  font-size: 0.95rem;
 }
 
 .stepA,
@@ -138,24 +176,24 @@
 .stepC,
 .stepD {
   opacity: 0;
-  transform: translateY(10px);
-  animation: popIn 500ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  transform: translateY(15px);
+  animation: smoothPopIn 600ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .stepA {
-  animation-delay: 80ms;
+  animation-delay: 100ms;
 }
 
 .stepB {
-  animation-delay: 170ms;
+  animation-delay: 200ms;
 }
 
 .stepC {
-  animation-delay: 260ms;
+  animation-delay: 300ms;
 }
 
 .stepD {
-  animation-delay: 340ms;
+  animation-delay: 400ms;
 }
 
 .menuSection {
@@ -164,14 +202,16 @@
 
 .sectionHeading h2 {
   font-family: var(--font-display);
-  font-size: clamp(1.1rem, 3vw, 1.7rem);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
   color: var(--text-strong);
+  letter-spacing: 0.02em;
 }
 
 .sectionHeading p {
-  margin-top: 0.46rem;
+  margin-top: 0.6rem;
   color: var(--text-muted);
   line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .menuNav {
@@ -191,43 +231,50 @@
 .menuLink {
   flex: 1;
   min-width: 190px;
-  min-height: 2.62rem;
-  border: 1px solid color-mix(in srgb, var(--glass-border) 50%, rgba(255, 255, 255, 0.2));
-  border-radius: 15px;
-  background: var(--menu-color);
-  color: var(--button-text);
-  font-weight: 760;
+  min-height: 2.8rem;
+  border: 1px solid var(--glass-border-soft);
+  border-radius: 16px;
+  background: var(--surface-main);
+  color: var(--text-strong);
+  font-weight: 700;
   letter-spacing: 0.01em;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.14);
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.72rem;
-  padding: 0.24rem 0.88rem;
-  box-shadow:
-    0 1px 0 color-mix(in srgb, #ffffff 28%, transparent) inset,
-    0 -4px 10px color-mix(in srgb, #000000 7%, transparent) inset,
-    0 7px 14px color-mix(in srgb, var(--text-subtle) 16%, transparent);
-  transition:
-    transform 180ms ease,
-    box-shadow 180ms ease,
-    filter 180ms ease,
-    border-color 180ms ease;
+  padding: 0.24rem 1.1rem;
+  box-shadow: var(--glass-shadow-soft);
+  position: relative;
+  overflow: hidden;
+  transition: all 250ms ease;
+}
+
+.menuLink::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: var(--menu-color);
+  opacity: 0.8;
+  transition: width 250ms ease, opacity 250ms ease;
 }
 
 .menuLink:hover {
-  transform: translateY(-1px);
-  box-shadow:
-    0 1px 0 color-mix(in srgb, #ffffff 30%, transparent) inset,
-    0 -4px 10px color-mix(in srgb, #000000 8%, transparent) inset,
-    0 10px 18px color-mix(in srgb, var(--text-subtle) 22%, transparent);
-  filter: brightness(1.03);
-  border-color: color-mix(in srgb, var(--focus-ring) 35%, var(--glass-border));
+  transform: translateY(-2px) scale(1.02);
+  background: var(--surface-strong);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08), 0 0 15px var(--menu-color);
+  border-color: var(--glass-border);
+}
+
+.menuLink:hover::before {
+  width: 10px;
+  opacity: 1;
 }
 
 .menuLink:active {
   transform: translateY(0);
-  filter: brightness(1);
 }
 
 .menuLink:focus-visible {
@@ -290,8 +337,12 @@
   }
 }
 
-@keyframes popIn {
-  to {
+@keyframes smoothPopIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
